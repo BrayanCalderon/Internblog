@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Week 4</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Presento - v3.8.1
+  * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="../index.html">Internship <span>Endava</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="../index.html">Home</a></li>
+          <li><a class="active" href="../blog.html">Blog</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="../index.html" class="get-started-btn scrollto">Get Started</a>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li>Week 4</li>
+        </ol>
+        <h2>virtualización VMware </h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="../assets/img/blog/week1/passiton.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="../blog-single.html">Cuarta Semana 8 Agosto</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="../blog-single.html">Brayan Calderón</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="../blog-single.html"><time datetime="2020-01-01">8 Agosto, 2022</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="../blog-single.html">0 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+
+
+                
+                <p>
+                  Esta primera semana fue dedicada al Onboarding por parte del grupo de engagement de la empresa, es decir nos instruyeron acerca de la filosofia de la empresa, 
+                  sus valores, el nicho comercial al cual pertenecen, así como iniciativas que hay dentro de la empresa, como por ejemplo la iniciativa We Care, Team 3.0.
+    
+                </p>
+                <img src="../assets/img/blog/week1/passiton.jpg" class="img-fluid" alt="">
+                <br>
+                <h3>Virtualización Vmware</h3>
+                <h4>Definición de un Hipervisor</h4>
+                <p>
+                  Un hipervisor hace parte del software,firmware o hardware que crea y corre máquinas virtuales. Un computador 
+                  donde se estén ejecutando un hipervisor con uno o más máquinas virtuales será considerado un host machine. Cada 
+                  máquina virtual es por tanto un guest machine. El hipervisor se encarga de presentar el guest operating system con 
+                  una plataforma de operación virtual y administra los recursos asociados a dicho sistema operativo
+                </p>
+                <p>
+                  <ul>
+                    <li><b>Type 1: </b> Native o Bare metal, estos hipervisores corren directamente sobre el hardware del host 
+                      para controlar el hardware y administrar las máquinas virtuales. (VMware ESX(i), Microsoft Hyper-V)
+                    </li>
+                    <li><b>Type 2:</b>  O Hosted, es un hipervisor que funciona sobre un sistema operativo tradicional.Por tanto los 
+                      guest operating-system corren por encima de esta capa del hipervisor. VMware Workstation, VirtualBox </li>
+                  </ul>
+                </p>
+                <img src="../assets/img/blog/week4/hipervisor.png" class="img-fluid" alt="">
+                <h4>ESX vs ESXi</h4>
+                <p>
+                  ESX fue el primer hipervisor desarrollador por VMware, sin embargo no contaba con las suficientes caracteristicas, 
+                  para escalar de manera prolongada durante el tiempo, por tal razón se creó ESXi  donde se soluciona las limitaciones 
+                  de ESX además de agregar nuevas funcionaliades.
+                </p>
+                <h4>Host and Vms</h4>
+                <p>
+                  Todas las máquinas virtuales en un cierto host están provistas de los siguientes recursos:
+                  <ul>
+                    <li>CPU</li>
+                    <li>RAM</li>
+                    <li>Storage</li>
+                    <li>Networking</li>
+                  </ul>
+                </p>
+                <img src="../assets/img/blog/week4/vmhost.png" class="img-fluid" alt="">
+                <h4>Storage protocols and connection type</h4>
+                <p>
+                  <ul>
+                    <li>
+                      Locally Attached: <ul>
+                        <li>Sata</li>
+                        <li>SAS</li>
+                        <li>SCSI</li>
+                      </ul>
+                    </li>
+                    <li>Shared: <ul>
+                      <li>iSCSI</li>
+                      <li>Fibre-Channel</li>
+                      <li>Fibre-channel over Ethernet</li>
+                      <li>NFS 3/NFS 4.1</li>
+                    </ul></li>
+                  </ul>
+                </p>
+                <h4>Storage Devices</h4>
+                <p>
+                  <ul>
+                    <li>SAN: 
+                      <ul>
+                        <li>High-grade storage device</li>
+                        <li>Costoso</li>
+                        <li>Soporta más protocolos</li>
+                        <li>Perfecto para producción</li>
+                        <li>Caracteristicas avanzadas (SAN Snapshots)</li>
+                      </ul>
+                    </li>
+                    <li>NAS:
+                      <ul>
+                        <li>Dispositivo más economico</li>
+                        <li>Menor cantidad de protocolos</li>
+                        <li>Perfecto para backups</li>
+                      </ul>
+                    </li>
+                    <li>Deduplication appliance NAS boxes</li>
+                  </ul>
+                </p>
+                <h3>Vcenter</h3>
+                <p>
+                  Vcenter es un producto que maneja la parte de todos los recursos y features de toda la infraestructura local, muchos host 
+                  pueden ser añadidos a vCenter y luego ser agregados a clusters y agrupados en datacenters.
+                </p>
+                <img src="../assets/img/blog/week4/vcenter.png" class="img-fluid" alt="">
+                <p>
+                  Hay distintas formas de hacer deployment, una de las primeras formas es por medio de un appliance que es una 
+                  imagen lista para ser funcional. 
+                  <ul>
+                    <li>Deployed as vCenter Server Appliance(VCSA): <ul>
+                      <li>
+                        Based on Photon
+                      </li>
+                      <li>Only virtual</li>
+                      <li>Database Option</li>
+                    </ul></li>
+                    <li>Core Components: <ul>
+                      <li>vCenter Server</li>
+                      <li>Single Sign-on</li>
+                      <li>VMware vSphere web client: Con esta applicación podemos acceder de manera remoto a nuestrs hosts</li>
+                    </ul></li>
+                  </ul>
+                </p>
+
+                <p>
+                  Hay distintos features caracteristicas en vSphere como:
+                  <ul>
+                    <li>vMotion: Mover una VM sin interrupción de un host a otro</li>
+                    <li>Storage vMotion Mover archivos de almacenamiento de un datastore a otro</li>
+                    <li>Distributed Resource Scheduler: Utiliza vMotion para migrar VM entre host y datastores para balancear cargas</li>
+                    <li>High Availability: En caso de que un host falle, reiniciará la instancia en un host diferente, con bajos downtime</li>
+                    <li>Fault Tolerance: Corre una copia perfecta de una VM y la cambia en caso de un failure en el hardware</li>
+                  </ul>
+                </p>
+
+                <p>
+                  Por el lado de licensamiento hay distintas maneras de utilizar vSphere
+                  <ul>
+                    <li>Hipervisor ("Free")</li>
+                    <li>Essentials</li>
+                    <li>Essentials Plus</li>
+                    <li>Standard</li>
+                    <li>Enterprise</li>
+                    <li>Enterprise Plus</li>
+                  </ul>
+                </p>
+
+                <p>
+                  La conexión para conectarme con el vCenter tengo distintas formas, en un host de ESXi tengo acceso de root, y puedo acceder a el 
+                  por el puerto TCP 443 o mediante SSH utilizando el puerto 22. Mediante el puerto 902 por NFC
+                </p>
+                <p>
+                  a Vcenter nos podemos conectar por medio del cliente de vSphere vcenteriporfqdn/ui/ y de manera legacy por medio del puerto 443
+                </p>
+
+                <h4>Managed Object Browser</h4>
+                <p>
+                  Es una interfaz grafica que nos permite navegar por los objetos de un servidor e invocar metodos. Cualquier cambio 
+                  realizado a través de MOB´s tomarán efecto en el servidor. Hay que separar los MOB´s de cada host y de cada vCenter.
+                </p>
+                <h4>VM Files</h4>
+                <p>
+                  <ul>
+                    <li>machine.vmx : configuración de la máquina virtual</li>
+                    <li>machine-falt.vmdk : archvivos descriptores de disco y data blocks</li>
+                    <li>machine-0001-delta.vmdk : Delta disk descriptor and disk data blokcs, cuando la máquina está corriendo un spanshot</li>
+                    <li>machine-ctk.vmdk : utilizada para mantener los cambios </li>
+                    <li> mchine.nvram :  Esencialmente la bios de la máquina virtual</li>
+                    <li>machine.vmsd : Snapshot tree y Snapshot dek estado de archivos</li>
+                    <li>machine.log : Logs especificos de la instancia están guardados acá</li>
+                  </ul>
+                </p>
+
+                <h4>VMware Tools</h4>
+                <p>Existen distintas herramientas para interactuar con el hipervisor, existen software y drivers de: Red, storage, graficos, etc. 
+                  Permite comunicaciones con los guest via network-less VIX API. <br>
+                  En windows se utiliza .msi package y en Linux se utiliza .tar con perl script.
+                </p>
+                
+                <h4>Snaphots</h4>
+                <p>Las snapshots son una copia persistente del estado de una máquina en un punto del tiempo, hay dos formas de 
+                  implementar un snapshot, por medio de Redirect-on-write (Utilizado en ESXi) y Copy-on-write
+                </p>
+                <h4>Redirect-on-write</h4>
+                <p>
+                  Una vez un snapshot es creado,los cambios en el disco son escritos en un disco delta, en cambio el disco base es imposible 
+                  leer y escribir. <br>
+                  Los arboles de snapshots pueden ser mantenidos, VMware suporta hasta 32 snapshots en una única rama. I/O Performance sufre de manera 
+                  significativa durante los snapshots, y el delete de Snapshots puede causar un freeze(vSphere < 6.0)
+                  
+                </p>
+                <img src="../assets/img/blog/week4/redirect.png" class="img-fluid" alt="">
+                <br><br>
+                <h3>VMFS</h3>
+                <p>
+                  Virtual Machine File System, son archivos de sistema de clusters. 
+                  Es utilizado para guardar las imagenes de las máquinas, incluyendo los snapshots. Multiples servidores pueden escribir/leer 
+                  al mismo archivo de manera simultanea, mientras que los archivos individuales de cada máquina virtual está bloqueado
+                </p>
+                <p>
+                  VMFS-6 Introduce dos nuevos bloques internos para LFB large file binary seteados a 512MB y SMB small file blocks a 1Mb. Son utilizados para 
+                  archivos VMFS-6.
+                </p>
+                <h3>RDM</h3>
+                <p>
+                  Raw Device Mapping, nos permite conectar LUNS a host de manera directa bypaseando la capa de VMFS. 
+                  Por ejemplo un disco NTFS puede ser ligado a una instancia de Windows.
+                  <ul>
+                    <li>Physical RDM, aka "Pass through" <ul>
+                      <li>Almost all SCI commands are sent to the device, unfiltered</li>
+                      <li>Snapshots are not supported</li>
+                    </ul></li>
+                    <li>Virtual RDM: <ul>
+                      <li>Read an write SCSI commands are translated by the ESXi host</li>
+                      <li>Snapshots are supported</li>
+                    </ul></li>
+                  </ul>
+                </p>
+
+                <h3>Disk proviosining types</h3>
+                <ul>
+                  <li>Thin Provisioning:
+                    Only the blocks that have been written to are actually allocated, such disk slowly grows in size on the datastore
+                  </li>
+                  <li>
+                    Thick lazy-zeroed:
+                    El espacio es inmediatamente alocado para dicho disco
+                  </li>
+                  <li>
+                    Thick eager-zeroed:
+                    El espacio es inmediatamente alocado y escribe el cero. (Utilizado mucho para aplicaciones transaccionales)
+                  </li>
+                </ul>
+                <h3>Discos Dependiente y Independiente</h3>
+                <p>
+                  <ul>
+                    <li>Dependiente: El más común, soporta snapshots</li>
+                    <li>Persistente Independiente: No soporta snapshots, los cambios siempre están escritos en el disco</li>
+                    <li>No persistente Independiente: Los cambios siempre son escritos en un disco delta el cual es eliminado una vez la 
+                      máquina virtual es apagada, util para testings y setups de laboratorio.
+                    </li>
+                  </ul>
+                </p>
+                <h3>Permisos</h3>
+                <p>
+                  Un rol es un set de permisos granulares para cada tipo de objeto manejado por Vsphere. 
+                  Los roles son asignados por usuario o por grupo para un objeto en especifico(e.g VM, datastore) or 
+                  a container (folder,resource pool, cluster, etc).
+                </p>
+                <p>
+                  Propagate to children es una opción que permite propagar los permisos a los hijos de los objetos de un contenedor.
+                </p>
+                <h3>Virtual Volumes</h3>
+                <p>
+                  Es un nuevo concepto que permite granularizar el Volume de una instancia, entonces en vez de tener un solo LUN para el 
+                  storage de las 3VMs, en un contenedor y gracias a una conexión provista por el vendor del storage se puede separar por medio 
+                  de volumenes virtuales los storage de cada máquina virtual, aumentando así el fault tolerance en ese hardware.
+                </p>
+                <img src="../assets/img/blog/week4/vivo.png" class="img-fluid" alt="">
+                <img src="../assets/img/blog/week4/vivo2.png" class="img-fluid" alt="">
+
+                <h3>Data Protection</h3>
+
+                <h2>Terminologia y Conceptos</h2>
+
+                <p>
+                  <ul>
+                    <li>
+                      Bussiness Continuity: Habilidad de asegurar por parte de una organización las operaciones ante un desastre critico
+                    </li>
+                    <li>
+                      High Availability: Habilidad para mantener data/información en sincronización entre dos dispositivos (local o externo) y mantener la información al día.
+                    </li>
+                    <li>
+                      Protected Site: Sitio donde se encuentra la producción del cliente, donde está el core del cliente
+                    </li>
+                    <li>
+                      Recovery Site: Lugar donde tenemos un equipo listo en caso de una falla del equipo primario
+                    </li>
+                    <li>
+                      Software Replication: Distintas tecnologias que están en el mercado para replicar información y enviarlo al sitio secundario 
+                    </li>
+                    <li>
+                      Hardware Replication: Los vendors en su portafolio ofrecen servicios a nivel de hardware
+                    </li>
+                    <li>
+                      Failover/Failback: Es el proceso automatico o manual de cambiar todas las operaciones del sitio protegido al recovery site
+                    </li>
+                    <li>
+                      Syncronous copy: Cualquier cambio producido en el sitio primario, será copiado inmediatamente en el sitio de recovery
+                    </li>
+                    <li>
+                      Asyncronous copy: Es una copia realizada On-Demand o copia periodica
+                    </li>
+
+                  </ul>
+                  
+                </p>
+                <img src="../assets/img/blog/week4/keyconcepts.png" class="img-fluid" alt="">
+                <br><br>
+                <p>
+                  Hay tecnologias que nos permiten aplicar recovery plan disaster antes del desastre entre eso se encuentran los 
+                  AAC (Cluster Activo Activo, por ejemplo VMware )y los APC (Cluster Activo Pasivo) sincronización en un segundo nodo pasivo, 
+                  SR ( Sincronous Replication)  Nuestro sistema de contingencia tiene la data al día, se debe subir servicios en secundario, 
+                  AR (Asyncronous replication) se realiza la copia de datos de manera periodica y podemos perder información debido a la no 
+                  sincronización, LB(Local Backup) Es decir un respaldo de la información del servidor y realizar una restauración de la información 
+                  TB (Tape Backup ) almacenamiento en cintas magneticas para largas retenciones, es un proceso muy lento debido a que toca pedir ayuda a terceros.
+                  AB (Cloud Backup(?) ) tengo un proceso de rehidratación que dura 1 o 2 días para tener la data aumentando el tiempo de recuperación 
+                  del desastre.
+                </p>
+                <h4>VMware Options: vSphere Replication</h4>
+                <img src="../assets/img/blog/week4/vsphere_replication.png" class="img-fluid" alt="">
+                <br><br>
+                <p>
+                  Permite realizar replicaciones utilizando la replicación por medio de vSPhere
+                </p>
+
+                <h4>Site Recovery Manager</h4>
+                <img src="../assets/img/blog/week4/site_recovery.png" class="img-fluid" alt="">
+                <br><br>
+                <p>
+                  Se necesitan los archivos de configuración y la data y Vmware pueda abrir una nueva oepración dada una falla
+                </p>
+
+                <h4>Availability Sets <h4>
+                <img src="../assets/img/blog/week4/aval_set.png" class="img-fluid" alt="">
+                <br><br>
+                <p>
+                  Concepto de Azure para configurar maquinas en distintas zonas para mantener el servicio dado una falla en uno o dos dominios,
+                  son clusters que están repartidos en distintos dominios
+                </p>
+              
+                <h4>Disaster Recovery</h4>
+                <img src="../assets/img/blog/week4/disas_recovery.png" class="img-fluid" alt="">
+                <br><br>
+                <p>
+                  Azure permite tener zonas distintas para mantener información resguardada
+                </p>
+                <h4>Availability Zones</h4>
+                <img src="../assets/img/blog/week4/aval_zones.png" class="img-fluid" alt="">
+                <br><br>
+                <p>
+                  Son datacenters en una misma ubicación geografica donde hay una replicación de los datos, donde si hay un fallo 
+                  nosotros como usuarios seamos indiferentes al fallo y poder seguir consumiendo el servicio. 
+                </p>
+                <h4>Backup Policies</h4>
+                <p>	Se pueden configurar politicas de backup para las instancias y configurar de manera granular las politicas</p>
+                <h4>AWS - Options Backup</h4>
+                <img src="../assets/img/blog/week4/aws_backyp.png" class="img-fluid" alt="">
+                <br><br>
+                <p>De igual forma en AWS, podemos utilizar servicios y politicas de Backup para el mantenimiento de los datos. </p>
+                <h4>AWS - Disaster Recovery </h4>
+                <img src="../assets/img/blog/week4/aws_dr.png" class="img-fluid" alt="">
+                <p>
+                  AWS, tiene algunas formas de si por ejemplo pierdes una instancia, AWS crea una nueva instancia y la reemplaza sin tener 
+                  que acceder de manera manual
+                </p>
+                <h3>Disaster Reocovery Plan</h3>
+                <p>
+                  Es una documentación estructurada de la definición y proceso que describe como Una 
+                  organización puede regresar de manera rapida al trabajo ante un desastre no planeado 
+                  . El DRP  es una parte esencial de un business continuity plan. BCP
+                  <ul>
+                    <li>Todos en la compañia deben conocer el DRP</li>
+                    <li>Define prioridades y categorización de la data</li>
+                    <li>DR site debe tener almenos un 70% de los recursos?</li>
+                  </ul>
+                </p>
+                <p>
+                  Existen procesos como Backup,Storage, Replication, HA. 
+                </p>
+                <h3>Business Continuity</h3>
+                <p>
+                  Es la habilidad para asegurar que una organización tendrá la capacidad de 
+                  operar sus funciones criticas de negocio durante eventos de emergencia. Dichos eventos pueden 
+                  incluir desastres naturales, crisis, pandemia, o cualquier disrupción en la operación de negocio.
+                </p>
+                <p>
+                  Todos en la compañia están encargados de garantizar que el BC se lleve a cabalidad, de igual 
+                  forma la data o la información del negocio es la parte más importante del negocio.
+                </p>
+                
+
+
+
+
+
+
+
+                
+
+
+
+              </div>
+
+              <div class="entry-footer">
+                <i class="bi bi-folder"></i>
+                <ul class="cats">
+                  <li><a href="#">Intern</a></li>
+                </ul>
+
+                <i class="bi bi-tags"></i>
+                <ul class="tags">
+                  <li><a href="#">Onboarding</a></li>
+                  <li><a href="#">Primera Semana</a></li>
+                  <li><a href="#">Cultura</a></li>
+                </ul>
+              </div>
+
+            </article><!-- End blog entry -->
+
+
+
+
+              
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form action="">
+                  <input type="text">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><!-- End sidebar search formn-->
+
+
+              <h3 class="sidebar-title">Post Recientes</h3>
+              <div class="sidebar-item recent-posts">
+                <div class="post-item clearfix">
+                  <img src="../assets/img/blog/week1/passiton.jpg" alt="">
+                  <h4><a href="week1.html">Week 1</a></h4>
+                  <time datetime="2020-01-01">Julio 18, 2022</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="../assets/img/blog/week2/git.png" alt="">
+                  <h4><a href="week2.html">Week 2</a></h4>
+                  <time datetime="2020-01-01">Julio 25, 2022</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="../assets/img/blog/week3/Backup2.png" alt="">
+                  <h4><a href="week3.html">Week 3</a></h4>
+                  <time datetime="2020-01-01">Agosto 1, 2022</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="../assets/img/blog/blog-recent-4.jpg" alt="">
+                  <h4><a href="week4.html">Week 4</a></h4>
+                  <time datetime="2020-01-01">Agosto 8, 2022</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="../assets/img/blog/blog-recent-5.jpg" alt="">
+                  <h4><a href="week5.html">Week 5</a></h4>
+                  <time datetime="2020-01-01">Agosto 15, 2022</time>
+                </div>
+
+              </div><!-- End sidebar recent posts-->
+
+              <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a href="#">Valores</a></li>
+                  <li><a href="#">Filosofia</a></li>
+                  <li><a href="#">Core Business</a></li>
+                  <li><a href="#">Cultura</a></li>
+                  <li><a href="#">Endavan</a></li>
+                </ul>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+  
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Internship Endava</h3>
+              <p>
+                Universidad Nacional de Colombia <br>
+                Bogotá D.C <br>
+                Colombia <br><br>
+                <strong>Email:</strong> bjcalderona@unal.edu.co<br>
+              </p>
+            </div>
+  
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              </ul>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+    </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
