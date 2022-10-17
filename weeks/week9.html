@@ -84,7 +84,7 @@
             <article class="entry entry-single">
 
               <div class="entry-img">
-                <img src="../assets/img/blog/week8/security.jpg" alt="" class="img-fluid">
+                <img src="../assets/img/blog/week9/linux.jpg" alt="" class="img-fluid">
               </div>
 
               <h2 class="entry-title">
@@ -101,117 +101,155 @@
 
               <div class="entry-content">
                 <p>
-                  La octava semana fue la ultima semana de Networking, se trabajaron conceptos de Seguridad en redes y VPN´S.
+                  La Novena semana es la primera semana en la torre de Linux.
     
                 </p>
-                <img src="../assets/img/blog/week8/security.jpg" class="img-fluid" alt="">
+                <img src="../assets/img/blog/week9/linux.jpg" class="img-fluid" alt="">
                 <br>
                 <br>
-                <h1>Computer Security</h1>
+                <h1>Linux</h1>
                 <p>
-                  La protección otorgada a un sistema de información automatizado en orden de alcanzar los objetivos aplicables de preserver la integridad, disponibilidad y confidencialidad de los recursos de un sistema de información, incluyendo Software, hardware, firmware, información y telecomunicaciones.
+                  Linux es un kernel, el núcleo del sistema operativo creado por Linus Torvalds, GNU Linux es el Sistema operativo que utiliza como kernel a Linux. Existen demasiadas distribuciones basadas en Linux debido al open-source, debido a que los usuarios son capaces de crear sus propias distribuciones.
+
                 </p>
-                <h2>Triada CIA</h2>
-                <img src="../assets/img/blog/week8/cia.png" class="img-fluid" alt="">
-
-
                 <p>
+                  Linux viene del Sistema operativo Unix en 1970 y del Lenguaje C, debido a que Linus quería desarrollar un software que fuera libre para la comunidad. Minix fue el predecesor y el que monta las bases para el desarrollo de nuevos sistemas operativos open-source como Linux.
+                </p>
+                <img src="../assets/img/blog/week9/linus.webp" class="img-fluid" alt="">
+                <p>
+                  Linux es utilizado en todo tipo de aplicaciones, desde aplicaciones sencillas, hasta tareas criticas llevadas por la Nasa.  Linux lleva una licencia GPL, lo cual es un software libre y de open-source. Debido a que gratis y open-source no es igual. 
+                </p>
+                <p>
+                  Existen muchas distribuciones o flavors de Linux, Debian, Red Hat, Arch Linux, son las más conocidas actualmente. Ubuntu es el sistema operativo más amigable hacia el usuario gracias a la interfaz gráfica que ofrece.
+                </p>
+                <p>
+                  La diferencia entre las distribuciones en muchas ocasiones está caracterizada por las tareas que soluciona, Red hat es una solución para empresas montar servicios y servidores, por tanto es la preferida para suplir estas tareas.
+                </p>
+                <img src="../assets/img/blog/week9/distros.jpg" class="img-fluid" alt="">
+                <p>
+                  Una de las principales diferencias es el administrador de paquetes, los archivos RPM son utilizados en Red hat y dpm utilizado en sistemas Debian. Los comandos entre distribuciones no varían mucho, los comandos esenciales son los mismos entre las distribuciones. 
+                </p>
+
+              
+                <h2>Proyectos basados en Linux</h2>
+                <img src="../assets/img/blog/week9/blender.png" class="img-fluid" alt="">
+                   <p>
                   <ul>
                     <li>
-                      <b>Confidenciality:</b> Significa que un mensaje o la información enviada entre un emisor y un receptor solamente está disponible para los implicados. Es decir, únicamente los interesados en una información son los que tienen acceso a la información. Se utiliza Encriptación, más común es el AES 256, 512, RC4, DES, 3DES
+                      <b>Blender:</b> Blender es un programa de animación utilizado para generar animaciones 3D con bastante realismo.Entre otras tareas
                     </li>
                     <li>
-                      <b>Integrity: </b>En resumen, lo recibido es lo que se envió en un principio, la integridad del mensaje se debe asegurar por todo el trayecto sin perder y/o corromper información. Asegurar que no hay modificaciones en el mensaje.
+                      <b>Open Media Vault: </b>Es una herramienta para crear un almacenamiento a nivel de casa, es una nube privada ubicada en la casa para poder acceder a archivos de manera rápida y eficiente.
                     </li>
                     <li>
-                      <b>Availability: </b>Se refiere a garantizar a poder acceder de manera rápida a los recursos en los cuales se encuentra la información, aún cuando se encuentra bajo algún tipo de ataque por hackers.
+                      <b>Pinephone pro: </b>Es un teléfono con Linux diseñado para descubrir y cacharrear con este sistema operativo.
                     </li>
                   </ul>
                 
                 </p>
 
-                <h2>Niveles de impacto en brechas de seguridad</h2>
+                <h2>Conceptos basicos de Linux como S.O</h2>
+                <p>
+                  Para poder utilizar de manera correcta Linux, hay que aventurarse desde la fundamentación del Sistema operativo, conocer los comandos básicos, los servicios, los requests processing, los procesos, como es la gestión de la memoria, multithreading, etc.
+                </p>
+                <p>
+                  Linux es un sistema operativo multiusuario, debido a que permite a múltiples usuarios conectarse a un mismo sistema operativo en contraste con Windows, que solo permite un único usuario estar utilizando el sistema. 
+                </p>
+                <p>
+                  Los sistemas operativos Linux, son potencialmente más seguros que Windows debido a la cantidad de distribuciones que existen, sin embargo, ninguno es 100%, de igual forma un sistema operativo es seguro en la medida que el administrador del servidor lo sea.
+                </p>
+
+                <h3>Comandos basicos en la shell de Linux</h3>
                 <p>
                   <ul>
                     <li>
-                      <b>Low:</b>Es cuando se tienen daños pequeños que no afectan en gran medida al funcionamiento de un servicio.
+                      man: Utilizado para ver el manual 
                     </li>
                     <li>
-                      <b>Medium:</b>Es cuando se tiene una afectación importante a nivel de servicio organizacional
+                      ls: obtener la lista de archivos y folders
                     </li>
                     <li>
-                      <b>High:</b>Es cuando todo se cae, se tiene una consecuencia catastrófica que no permite seguir funcionando bajo ningún tipo.
+                      cd: change directory
                     </li>
+                    <li>
+                      pwd: present working directory
+                    </li>
+                    <li>
+                      cat: concatenate files
+                    </li>
+                    <li>
+                      ln -s file1 file2: Crea un vinculo simbolico
+                    </li>
+                    <li>
+                      echo: Permite mover información  usualmente de texto a un archivo
+                    </li>
+                    <li>du: disk usage</li>
+                    <li>df: almacenamiento disponible en el disco de cada partición </li>
+                    <li>who: quien está en la linea de comandos</li>
+                    <li>mkdir: crea un directorio </li>
+                    <li>rmdir: remueve un directorio si está vacio </li>
+                    <li>cp: copia un archivo</li>
+                    <li>touch: crea o actualiza un archivo</li>
+                    <li>grep: utilizado para buscar un texto especifico en un archivo</li>
+                    <li>sort: utilizado para ordenar el contenido de un archivo</li>
                   </ul>
                 </p>
 
-                <h2>Criptografia</h2>
+                <h2>Security</h2>
                 <p>
-                  Criptografía es el estudio o la práctica de técnicas de seguridad en la comunicación debido a comportamiento adverso. Generalmente es la construcción y análisis de protocolos que evitan que terceros puedan acceder o leer mensajes confidenciales.
+                  Computer security or cybersecurity is the discipline that is responsible for guaranteeing the privacy and integrity of the information stored in information systems
                 </p>
-                <img src="../assets/img/blog/week8/criptografia.png" class="img-fluid" alt="">
-                <br>
-                <br>
                 <p>
-                  Encriptar un mensaje es un proceso llevado por un algoritmo de encriptación, el cual es en el encargado de cifrar un mensaje para ser enviado hacia el usuario destino. El recepto tendrá un algoritmo de decryption que permitirá desencriptar el texto a un formato más legible. Para enviar un mensaje encriptado es necesario también enviar la llave o la key que permite al algoritmo de desencriptación poder convertir el mensaje al formato deseado.
+                  It is made up of practices, measures and equipment that aim to protect servers, equipment, mobile devices and software programs from attacks or failures
                 </p>
-                <img src="../assets/img/blog/week8/criptografia2.png" class="img-fluid" alt="">
+                <img src="../assets/img/blog/week9/security.jpg" class="img-fluid" alt="">
 
-                <br>
-                <br>
-                <h2>Tipos de Criptografia</h2>
+                <h3>Hackers vs Cyber-criminals</h3>
                 <p>
-                  Existen dos tipos de criptografía, la criptografía simétrica, la cual cuenta con una Key privada utilizada para cifrar y descifrar el mensaje en el algoritmo. Las llaves suelen ser de tamaños tal que no pueden ser leídas fácilmente por un humano.
+                  <b> hackers</b> are computer programmers who use their technical skills to solve problems on digital systems, networks, and devices.
                 </p>
-                <img src="../assets/img/blog/week8/simetrica.png" class="img-fluid" alt="">
-                <br><br>
                 <p>
-                  El segundo tipo de criptografía es la criptografía asimétrica, donde existe una key publica o llave publica, la cual es diferente tanto del emisor como del receptor.
+                  <b> Cyber-criminals:</b> they has the same technical skills as hackers, but these bad actors engage in criminal activity, such as breaking into protected digital systems without permission.
+
                 </p>
-                <img src="../assets/img/blog/week8/asimetrica.png" class="img-fluid" alt="">
-                <br>
-                <br>
-                <h2>Esquemas de Encriptación</h2>
+
+                <h3>Attacks</h3>
+                <p>Existen distintos tipos de ataques que puede sufrir una computadora o servidor </p>
                 <p>
                   <ul>
-                    <li>
-                      <b>Unconditionally Secure</b>No importa cuantos textos cifrados un atacante pueda obtener, será imposible para él conocer la información descifrada
-                    </li>
-                    <li>
-                      <b>Computationally Secure</b> Es cuando el esfuerzo y el tiempo empleado necesario para descifrar una información es demasiado alta para poder descifrar el mensaje a tiempo.
-                    </li>
+                    <li>Virus</li>
+                    <li>Troyanos</li>
+                    <li>Gusanos</li>
+                    <li>Ransomware</li>
+                    <li>Spyware</li>
+                    <li>Pishing</li>
+                    <li>DDOS</li>
+                    <li>SQL Injection</li>
+                    <li>Zero Day</li>
                   </ul>
                 </p>
-                <h2>Hashing</h2>
-                <p>
-                  Hashing es el proceso de modificar o alterar la información más allá del reconocimiento. Están diseñados para ser irreversibles. Pasamos como input la información a una función hash para calcular el Hash value o digest.
-                </p>
-                <img src="../assets/img/blog/week8/hashing.png" class="img-fluid" alt="">
-                <p>
-                  Hash también puede ser utilizado para chequeos de seguridad comprobando que la información no ha sido alterada o corrupta. El hash value debe ser igual tanto el stored como el de input.
-                </p>
-                <img src="../assets/img/blog/week8/hashing2.png" class="img-fluid" alt="">
-                <p>
-                  Las funciones HASH son funciones matemáticas que permiten crear un hash value a partir del input, teóricamente se diseñan para ser irreversibles, además de otorgar siempre un mismo valor para un mismo input. 
-                </p>
-                <h1>NAT</h1>
-                <p>
-                  NAT, significa network address translation, se utiliza a nivel de routers y es utilizado para convertir un set de direcciones IP a otro set de direcciones IP. Esto con la intención de preservar el limite de direcciones IPv4 públicas.
-                </p>
-                <p>
-                  Existen dos tipos de direcciones IP, las publicas y las privadas. Las direcciones ip publicas, se encuentran en internet y son necesarias para poder acceder a internet. Existen alrededor de 4 Billones de direcciones IP publica y son por tanto limitadas. Las direcciones IP privadas son de uso interno, no se encuentran registradas en Internet y por tanto no sirven para acceder a este.
-                </p>
-                <img src="../assets/img/blog/week8/nat.png" class="img-fluid" alt="">
-                <p>
-                  Hay distintos tipos de NAT, por ejemplo, si en una topología tenemos dos routers conectados, ambos routers intentarán realizar traducción, y eso es algo malo, por tanto una forma de solucionarlo es mediante port-forwarding que es designar un puerto a un dispositivo y todo el trafico vaya hacia dicho dispositivo. Una mejor forma de solucionar este problema es por medio de colocar el modem en modo bridge y que el router realice la traducción. 
-                </p>
-                <h2>IPSec</h2>
-                <p>
-                  IPSec es utilizado para Site-to-Site VPN y TLS  es utilizado para Remote Access VPN. Para poder utilizar VPN Remote Access se debe pedir permiso desde el dispositivo a la red para poder realizar la conexión, por ejemplo cisco anyconnect. 
-                  Full túnel, significa que una vez realizada la conexión todo el trafico será forwarded a la red corporativa.
-                  Split-tunel, significa que solamente el tráfico destinado a la red corporativa será forwarded por la vpn, ell resto del trafico será enviado por aparte.
+                <img src="../assets/img/blog/week9/attack.jpg" class="img-fluid" alt="">
 
+                <h3>Protection</h3>
+                <p>Asi como existen distintas formas de realizar un ataque, existen multiples maneras de evitar y estar seguros contra los ataques maliciosos</p>
+                <p>
+                  <ul>
+                    <li>Firewall</li>
+                    <li>Antivirus</li>
+                    <li>Encripcion</li>
+                    <li>Hardening</li>
+                    <li>Updates</li>
+                    <li>User Training</li>
+                    <li>Desarrollo con estandares de seguridad</li>
+                  </ul>
                 </p>
+
+
+
+
+
+                
+
 
 
 
@@ -240,9 +278,9 @@
 
                 <i class="bi bi-tags"></i>
                 <ul class="tags">
-                  <li><a href="#">Onboarding</a></li>
-                  <li><a href="#">Primera Semana</a></li>
-                  <li><a href="#">Cultura</a></li>
+                  <li><a href="#">Linux</a></li>
+                  <li><a href="#">Novena Semana</a></li>
+                  <li><a href="#">Virtualización</a></li>
                 </ul>
               </div>
 
