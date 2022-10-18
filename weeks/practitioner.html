@@ -122,6 +122,32 @@
                     <li><b>Storage Optimized Instance</b></li>  Instancias que son diseñadas para cargas de trabajo donde se requiere un alto IOPS Input Ouput Operations Per Second. Tareas como Distributed file systems, data warehousing applications, y high frecuency online transaction processing son lo más utlizados.
                   </ul>
                 </p>
+                <h2>Amazon EC2 Pricing</h2>
+                <p>
+                  <ul>
+                    <li><b>On demand:</b> Es el pago por defecto a la hora de crear instancia, es recomendado para workloads que son de corta duración como son testeos, etc.</li>
+                    <li><b>Reserved Instances:</b> Permite reducir el costo dependiendo de ciertos requisitos, por ejemplo un contrato de 1-3 años para una instancia, obteniendo hasta un 72% de descuento. Cualquier uso más allá del contrato es cargado con precio regular On-demand.</li>
+                    <li><b>Spot Instances:</b>Son ideales para cargas de trabajo cortas y que permiten ser interrumpidas, es la más economica opción, sin embargo, aws puede requerir de la instancia en cualquier momento. La duración de estas instancias es máximo 24H de manera continua. La ventana de tiempo cuando la piden es de 2 minutos. </li>
+                    <li><b>Dedicated hosts:</b> Son servidores físicos que son puestos en su totalidad para el usuario, usualmente son requeridos para cumplir requerimientos y políticas y es sole-tenant es decir no habrá nadie más utilizando dicho servidor.</li>
+                  </ul>
+                </p>
+                <p> 
+                  Es posible utilizar un per-socket, per-core, per-vm software licences para mantener requerimientos, Dedicated host son los más costosos.
+                </p>
+
+                <h2>Amazon EC2 Auto-Scaling</h2>
+                <p>
+                  Auto-scaling es un servicio que permite escalar de manera automática instancias de EC2 para cumplir la demanda de acceso a los servicios. Mediante AutoSCaling tenemos dos opciones:
+                </p>
+                <p>
+                  <ul>
+                    <li><b>Dynamic Scaling:</b>Que responde al cambio de la demanda </li>
+                    <li><b>Predictive Scaling:</b> Automaticamente asigna el número de instancias basado en una predición de demanda.</li>
+                  </ul>
+                </p>
+                <center>
+                <img src="../assets/img/blog/aws-services/sclaing.png" class="img-fluid" alt="">
+                </center>
 
                 
 
