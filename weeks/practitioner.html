@@ -148,6 +148,667 @@
                 <center>
                 <img src="../assets/img/blog/aws-services/sclaing.png" class="img-fluid" alt="">
                 </center>
+                <p>
+                  Si no se configura el desired capacity se toma por defecto como el mínimo, la cantidad mínima de instancias es 1, por tanto, no puede escalar a cero. La capacidad máxima de escalamiento puede ser hasta 4 instancias máximo.
+                </p>
+                <br>
+                <p>
+                  Auto-Scaling utiliza instancias EC2 por tanto solo se hará cobró de las instancias que estén en uso.
+                </p>
+
+                <h2>Elastic Load Balacing </h2>
+                <p>
+                  Es un servicio de AWS que distribuye de manera automática todo el tráfico a través de múltiples recursos como Instancias de EC2.
+                </p>
+
+                <p>
+                  Un Load Balancer actúa como único punto de contacto entre todo el tráfico proveniente de internet hacia los recursos AWS, es un servicio Regional y altamente disponible por lo cual no deberemos preocuparnos mucho de cómo funciona detrás de bambalinas.
+                </p>
+
+                <p>
+                  ELB escala de manera automática, por tanto, mientras el tráfico crezca, de igual forma lo hará ELB para direccionar el tráfico sin cambios en su cobro por hora.
+                </p>
+
+                <p>
+                  Debido a que ELB es regional, es una única URL para frontend, luego ELB direcciona todo el tráfico hacia el backend, el frontend no le interesa el backedn y viceversa, es por tanto una decoupled architecture.
+                </p>
+
+                <center>
+                  <img src="../assets/img/blog/aws-services/elb.png" class="img-fluid" alt="">
+                </center>
+
+                <h2>Amazon Simple Queue Service (Amazon SQS) </h2>
+                <p>
+                  Es un servicio de encolamiento de mensajes message queuing service. 
+                </p>
+                <p>
+                  Utilizando SQS podemos enviar,guardar,y recibir mensajes entre aplicaciones y componentes de software sin tener que perder mensajes o requerir que el otro servicio este siempre disponible. Es decir un servicio envia un mensaje a una cola, y un usuario toma el mensaje de la cola, lo procesa, y luego elimina el mensaje de la cola.
+                </p>
+                <p>
+                  La información contenida en el mensaje es llamada payload y está protegida hasta el delivery del mensaje.
+                </p>
+                <center>
+                  <img src="../assets/img/blog/aws-services/sqs.png" class="img-fluid" alt="">
+                </center>
+                <h2>Amazon Simple Notification Service (Amazon SNS) </h2>
+                <p>
+                  Es un servicio publish/subscribe, SNS utiliza Topics a los cuales un Publisher publica un mensaje hacia los suscriptores de dicho Topic. Es muy similar a SQS para enviar mensajes a servicio, pero también puede enviar notificaciones a usuarios finales mediante el model pub/sub. Pueden ser enviados utilizando mobile push, sms, y emails.
+                </p>
+                <center>
+                  <img src="../assets/img/blog/aws-services/sns.png" class="img-fluid" alt="">
+                </center>
+                <h2>AWS Lambda</h2>
+                <p>
+                  Es un servicio que permite correr código sin la necesidad de administrar servidores ni infraestructura. (Serverless)
+                </p>
+                <p>
+                  Lambda utiliza las Lambda Functions que son snippets de código que son activados mediante un trigger, cuando el trigger es detectado, el código es puesto en funcionamiento de manera automática hasta dar una respuesta, es altamente escalable, y el mantenimiento es realizado por AWS. Es ideal para código que no toma más de 15 minutos en ejecutarse, como web backends, handling requests, etc.
+                </p>
+                <center>
+                  <img src="../assets/img/blog/aws-services/lambda.png" class="img-fluid" alt="">
+                </center>
+
+                <h2>Amazon Elastic Container Service (Amazon ECS) </h2>
+                <p>
+                  Es un servicio de administración de contenedores altamente escalable, y altamente disponible que permite correr y escalar aplicaciones en contenedores en AWS.
+                </p>
+                <h2>Amazon Elastic Kubernetes Services (Amazon EKS) </h2>
+                <p>
+                  Es un servicio utilizado para correr Kubernetes en AWS.
+                </p>
+                <h2>AWS Fargate</h2>
+                <p>
+                  ECS Y EKS pueden correr sobre instancias de EC2, pero si uno no quiere preocuparse por la infraestructura que hay detrás para hostear los contenedores Fargate es la solución, ya que es un motor de cómputo serverless para contenedores (Serverless compute engine). Funciona tanto con ECS como con EKS.
+                </p>
+
+                <h2>AWS Outpost</h2>
+                <p>
+                  Permite extender la infraestructura de AWS a un data-centre propio siendo este completamente administrado por AWS pero separado en nuestro propio lugar.
+                </p>
+
+                <h2>AWS Elastic Beanstalk </h2>
+                <p>
+                  Es un servicio que permite hacer deploy de código de manera sencilla provisionando el código y la configuración deseada realizando las siguientes tareas:
+                <ul>
+                  <li>Ajustando capacidad</li>
+                  <li>Balanceo de carga</li>
+                  <li>Escalado Automatico</li>
+                  <li>Aplicación de monitoreo de salud</li>
+                </ul>
+                </p>
+                <p>
+                  También permite guardar de manera sencilla la configuración de ambiente para así ser desplegada nuevamente, Beanstalk nos da la conveniencia de no tener que provisionar y administrar los recursos de manera separada mientras que obtenemos visibilidad y control de los recursos que se encuentran por debajo.
+                </p>
+                <h2>AWS CloudFormation</h2>
+                <p>
+                  Es un servicio que permite realizar Infraestructura como código IaaC, esto significa que podemos construir ambientes mediante líneas de código en vez de utilizar la consola de AWS para provisionar de manera individual los recursos.
+                </p>
+                <p>
+                  Permite definir una gran cantidad de servicios mediante una forma declarativa utilizando lenguajes como JSON y YAML, esto son llamados Cloudformation templates. Una forma declarativa permite construir un servicio sion tener que especificar como construirlo en detalle.
+                </p>
+                <h2>Amazon Virtual Private Cloud (Amazon VPC) </h2>
+                <p>
+                  Es un servicio de networking que permite separar nuestra infraestructura del resto de componentes de AWS mediante la asignación de un rango de direcciones IP privadas.
+                </p>
+                <p>
+                  Se pueden crear subnets dentro de la VPC que son los que contienen los recursos como las instancias EC2, estas subnets están conformadas por chunks de direcciones IP que permiten agrupar los recursos de manera conjunta.
+                </p>
+                <center>
+                  <img src="../assets/img/blog/aws-services/vpc.png" class="img-fluid" alt="">
+                </center>
+                <p>
+                  Existen 2 subnets importantes, Public Subnet contiene recursos que pueden ser accedidos por el público general mediante internet, como una pagina web. Las private subnets contienen recursos que solamente son accesible a través de la red privada, tales como bases de datos que solamente deben ser accedidos por los recursos internos.
+                </p>
+                <img src="../assets/img/blog/aws-services/vpc2.png" class="img-fluid" alt="">
+                <h2>Internet Gateway (IGW) </h2>
+                <p>
+                  Es un servicio que permitirá la conexión de los recursos (VPC) e internet. 
+                </p>
+                <img src="../assets/img/blog/aws-services/igw.png" class="img-fluid" alt="">
+                <h2>Virtual Private Gateway</h2>
+                <p>
+                  Es un servicio para poder conectarse a los recursos de manera privada dentro de una red propia, como una aplicación de HR o el backend de una base de datos. Es decir, que permitiremos tráfico de aquellas personas que se encuentren dentro de redes aprobadas, no de internet.
+                </p>
+                <p>
+                  Permite crear una conexión privada, por ejemplo, entre un data centre on-premise y la VPC, es decir una VPN.
+                </p>
+                <img src="../assets/img/blog/aws-services/vpg.png" class="img-fluid" alt="">
+
+                <h2>Direct Connect</h2>
+
+                <p>
+                  Es un servicio que permite establecer una conexión privada entre nuestro data-centre y la VPC.
+                </p>
+                <img src="../assets/img/blog/aws-services/directconnect.png" class="img-fluid" alt="">
+
+                <p>
+                  Es muy útil cuando se quiere evitar cualquier problema de bandwidth en la conexión.
+                </p>
+                <p>
+                  Es importante recalcar que una VPC puede tener múltiples tipos de gateways para múltiples recursos que estén en distintas subnets.
+                </p>
+
+                <h2>Network Access Control List (ACL) </h2>
+                <p>
+                  Es un servicio que actúa de firewall lógico a nivel de subred. Cada cuenta de AWS incluye una ACL por defecto que permite todo el tráfico entrante y saliente. Al momento de crear una custom ACL está estará por defecto negando todo el tráfico entrante y saliente, tocando así añadir las reglas para permitir el tráfico deseado.
+                </p>
+                <p>
+                  Las ACL realizando un filtrado Stateless, es decir no tienen memoria de las revisiones realizadas anteriormente y preguntaran a un mismo paquete a la hora de entrar y salir de una subnet. Este firewall no actúa a nivel de instancias por tanto si un paquete logra pasar este control, aún puede acceder a cualquier instancia que se encuentre en la subnet.
+                </p>
+
+                <h2>Security Groups</h2>
+                <p>
+                  Es un servicio que actual de firewall lógico a nivel de instancia. Por defecto a la hora de crear una instancia, el security group niega todo el trafico entrante a la instancia pero permite todo el tráfico que sale de la instancia. Este firewall es importante debido a que si una instancia es un servidor web, se espera que solamente maneje trafico HTTP en vez de otro tipo de trafico.
+                </p>
+                <p>
+                  Al contrarior que las ACL los security groups son stateful, es decir que tienen memoria de los chequeos realizados anteriormente, por tanto si un paquete logra pasar una vez este control, no será chequeado nuevamente si pasa de nuevo por el mismo control.
+                </p>
+                <img src="../assets/img/blog/aws-services/security.png" class="img-fluid" alt="">
+                <h2>Amazon Route 53</h2>
+
+                <p>
+                  Es un servicio web DNS que permite realizar traducción entre los nombres de dominio y las direcciones IP de los recursos. También permite direccionar trafico a distintos endpoints utilizando políticas de ruteo tales como:
+                <ul>
+                  <li>Latency-based</li>
+                  <li>Geolocation</li>
+                  <li>Geoproximity</li>
+                  <li>Weighted</li>
+                  <li>Failover</li>
+                </ul>
+                Otra función es la habilidad de administrar los records de los DNS para los nombres de dominio. Podemos registrar nuevos dominios directamente en Route 53, por tanto podemos comprar y administrar nuestros propios dominios en AWS. Se pueden también importar los nombres administrados por otros servicios de DNS, permitiendo así administrar todos los records desde un único punto.
+                </p>
+                <img src="../assets/img/blog/aws-services/route53.png" class="img-fluid" alt="">
+                <h2>Amazon Elastic Block Stores (Amazon EBS) </h2>
+                <p>
+                  Es un servicio que provee volúmenes de almacenamiento a nivel de bloques utilizado para ser asociados a las instancias EC2, toda la información que este guardada en este volumen una vez la instancia sea detenida o terminada perdurará.
+                </p>
+                <p>
+                  Se pueden crear snapshots de la EBS para mantener una mayor durabilidad en los datos. EBS está asociado a una única AZ y por tanto la EC2 debe residir en la misma zona de disponibilidad.
+                </p>
+                <img src="../assets/img/blog/aws-services/ebs.png" class="img-fluid" alt="">
+
+                <h2>Amazon Simple Storage Service (Amazon S3) </h2>
+                <p>
+                  Es un servicio de almacenamiento a nivel de objetos, es ideal para guardar cualquier tipo de archivos en un bucket. Los objetos están conformados por la data, la metadata y una key.
+                </p>
+                <p>
+                  La capacidad máxima de un archivo es de 5Tb y el espacio de almacenamiento es virtualmente ilimitado. Se pueden seguir un versionamiento de los objetos por si estos sufren cambios.
+                </p>
+
+                <h3>S3 Standard</h3>
+                <p>
+                  <ul>
+                    <li>Diseñado para acceso frecuente a la información</li>
+                    <li>Guarda la información en mínimo 3 Zonas de disponibilidad</li>
+                    <li>Ideal para alojar sitios web estáticos.</li>
+                  </ul>
+                </p>
+                <h3>S3 Standar-Infrequent Access (S3 Standard IA) </h3>
+                <p>
+                  <ul>
+                    <li>Idea para información que no es accedida de manera frecuente</li>
+                    <li>Similar a Estándar pero con menor costo.</li>
+                    <li>Ideal para guardar backups, disaster recovery files o cualquier objeto que require almacenamiento a largo plazo.</li>
+                  </ul>
+                </p>
+                <h3>S3 One Zone-infrequent Access (S3 One-zone IA) </h3>
+                <p>
+                  Similar a Standard IA pero en una única locación, no cuenta con AH pero sus precios y costos son mucho menores.
+                </p>
+                <h3>S3 Intelligent-Tiering </h3>
+                <p>
+                  <ul>
+                    <li>Es un servicio en el cual no conocemos exactamente el patrón de acceso a la información.</li>
+                    <li>Requiere de una comisión extra para monitorear y automatizar ls ubicación de los objetos.</li>
+                    <li>Si no ha accedido a un objeto en 30 días consecutivos IT moverá el objeto a la IA tier, si es accedido, será movido de nuevo a Standard.</li>
+                  </ul>
+                </p>
+                <h3>S3 Glacier</h3>
+                <p>
+                  <ul>
+                    <li>Es un servicio para archivar datos por largos periodos de tiempo a bajo costo.</li>
+                    <li>Permite recuperar la información en minutos a horas.</li>
+                    <li>Ideal para guardar data por muchos años debido a auditorias. Se pueden asignar políticas para su almacenamiento como vault lock policy.</li>
+                  </ul>
+                </p>
+                <h3>S3 Glacier Deep Archive </h3>
+                <p>
+                  Es el servicio más économico para almacenamiento y en el cual el acceso a los datos no se realizará por mucho mucho tiempo. Permite recuperar la información en las próximas 12 horas.
+                </p>
+                <h2>Amazon Elastic File System (Amazon EFS) </h2>
+                <p>
+                  Es un servicio de sistema de archivos altamente escalable utilizado para ser accedido desde múltiples instancias a un directorio de archivos al mismo tiempo. Este servicio es regional por lo cual puede ser accedido desde cualquier parte.
+                </p>
+                <h2>Amazon Relational Database Service (Amazon RDS) </h2>
+                <p>
+                  Es un servicio fully managed para correr bases de datos relacionales en AWS. Soporta 6 motores de bases de datos.
+                  <ul>
+                    <li>Aurora</li>
+                    <li>PostgreSQL</li>
+                    <li>MySQL</li>
+                    <li>MariaDB</li>
+                    <li>Oracle</li>
+                    <li>Microsoft SQL Server</li>
+
+                  </ul>
+                  AWS se encarga de realizar patching, backups, redundancy, failover y disaster recovery a estas instancias.
+                </p>
+
+                <h2>Amazon Aurora</h2>
+                <p>
+                  Es una base de datos de clase empresarial, es compatible con MySQL y PostgreSQL pero hasta 5 veces más rápido. Este servicio es el más completo y fully managed option por AWS. Permite hasta 6 copias de la información a través de 3 AZ y continous backups hacia S3. De igual forma permite desplegar hasta 15 read-replicas.
+                </p>
+                <h2>Amazon DynamoDB</h2>
+                <p>
+                  Es una base de datos no relacional para archivos de tipo key-value y para documentos, es un servicio serverless y altamente escalable. Redunda la data a través de distintas AZ y mirros la data a través de múltiples discos debajo de capa.
+                </p>
+                <h2>Amazon Redshift</h2>
+                <p>
+                  Es un servicio de data warehouse utilizado para big data analytics. Permite correr SQL contra exabytes de unstructed data corriendo en data lakes.
+                </p>
+                <h2>AWS Database Migration Service (AWS DMS) </h2>
+                <p>
+                  Es un servicio que permite migrar bases de datos relacionales, no relacionales y otros tipos de almacenamiento de datos.
+                </p>
+                <p>
+                  Las bases de datos de origen y destino pueden ser heterogéneas o homogéneas. Durante la migración la base de datos de origen permanece operacional por lo cual el downtime es reducido. Para las bases de datos heterogéneas se requiere de un paso extra el cual es la conversión del Squema.
+                </p>
+                <h2>Amazon DocumentDB</h2>
+                <p>
+                  Es un servicio de base de datos para documentos, soporta MongoDB.
+                </p>
+                <h2>Amazon Neptune</h2>
+                <p>
+                  Es una base de datos de grafos
+                </p>
+                <h2>Amazon Quantum Ledger Database (Amazon QLD) </h2>
+                
+                <p>
+                  Es una base de datos ledger immutable, es utilizado para observar toda la historia de todos los cambios que se han realizado a la información de aplicación
+                </p>
+
+                <h2>Amazon Managed Blockchain </h2>
+                <p>
+                  Es un servicio que permite crear y administrar blockchain networks con frameworks open-source.
+                </p>
+                <h2>Amazon Elasticache </h2>
+                <p>
+                  Es un servicio que permite agregar capas de cache en la parte top de la base de datos para mejorar los tiempos de lectura de las solicitudes más frecuentes. Existe Redis y Memcached
+                </p>
+                <h2>Amazon DynamoDB Accelerator (DAX) </h2>
+                <p>
+                  Es un servicio que permite agregar in-memory cache a DynamoDB, ayuda a mejorar de manera dramática los tiempos de lectura de las bases de datos no relacionales de milisegundos a microsegundos
+                </p>
+                <h2>AWS Identity and Access Management (IAM) </h2>
+                <p>
+                  Es un servicio que permite administrar el acceso a los distintos recursos y servicios ofrecidos a AWS.
+                  <ul>
+                    <li>IAM User,Groups, and roles</li>
+                    <li>IAM Policies</li>
+                    <li>Multi-factor Authentication</li>
+                  </ul>
+                </p>
+
+                <img src="../assets/img/blog/aws-services/iam.png" class="img-fluid" alt="">
+
+                <p>
+                  Los IAM user representan personas o aplicaciones que interactúan con los recursos y servicios, por defecto no tienen ningún permiso.
+                </p>
+                <p>
+                  IAM Policies son documentos JSON que permiten o niegan permisos a los recursos.
+                </p>
+                <p>
+                  IAM Group son agrupaciones de usuarios que manejarán la misma cantidad de permisos.
+                </p>
+                <p>
+                  IAM Roles son identidades que se pueden asumir para obtener acceso temporal a permisos.
+                </p>
+                <img src="../assets/img/blog/aws-services/role.png" class="img-fluid" alt="">
+
+                <h2>AWS Organizations </h2>
+                <p>
+                  Permite consolidar y administrar múltiples cuentas AWS en una misma locación.  Utilizando Organizations se pueden crear Service control policies SCP para poner restricciones a los servicios, recursos etc. Se puede aplicar estos SCP a nivel de Organización, Indivual o a Organizational Units.
+                </p>
+                <p>
+                  SCP afecta a todos los usuarios IAM incluido el usuario root. Las políticas IAM por otro lado no afectan a los usuarios root.
+                </p>
+
+                <h3>Organizational Units (OU) </h3>
+                <p>
+                  Permite implementar agrupaciones jerárquicas de group accounts en unidades organizaciones. Cuando se aplica una política a una OU las cuentas que hagan parte de dicha OU heredarán los mismos permisos especificados en la política.
+                </p>
+
+                <img src="../assets/img/blog/aws-services/organization.png" class="img-fluid" alt="">
+
+                <h2>AWS Artifact </h2>
+                <p>
+                  Es un servicio que permite acceder a todas las auditorias on-demand y security and compliance reports y select online agreements. 
+                </p>
+                <p>
+                  AWS Artifact agreements permite firmar un acuerdo con aws para cumplir ciertos standares. Podemos revisar aceptar y administrar agreements para una cuenta individual o para todas las cuentas en AWS organizations.
+                </p>
+                <p>
+                  Aws Artifact reports permite acceder a los reports de los auditors de terceros para revisar y asegurarse que todo lo planteado se está cumpliendo.
+                </p>
+                <img src="../assets/img/blog/aws-services/compliance.png" class="img-fluid" alt="">
+                <h2>Customer Compliance Centre</h2>
+                <p>
+                  Contiene los recursos que permiten aprender más acerca de AWS Compliance.
+                <ul>
+                  <li>AWS responde a key complance questions</li>
+                  <li>Un resumen de AWS risks and compliance </li>
+                  <li>Checklist de auditorias de seguridad</li>
+                  <li>Learning path para aprender sobre auditorias</li>
+                </ul>
+                </p>
+
+                <h2>AWS Shield</h2>
+                <p>
+                  Es un servicio utilizado para mitigar ataques de tipo DDOS. Existen 2 versiones
+                  <ul>
+                    <li>Standard: Sin costo, protege de los ataques más comunes DDOS.</li>
+                    <li>Advanced: Con costo, servicio que provee un diagnostico detallado de los ataques DDOS y la habilidad de detectar y mitigar sofisticados ataques DDOS.</li>
+                  </ul>
+                </p>
+                <h2>AWS Key Managament Service</h2>
+                <p>
+                  Es un servicio para realizar operaciones criptográficas a través de llaves. KMS es utilizado para crear, administrar y usar llaves criptograficas, también es utilizado para usar llaves a lo largo de un rango de servicios en las aplicaciones.
+                </p>
+                <p>
+                  Es buena práctica utilizar encripción en reposo y en tránsito para asegurar la información.
+                </p>
+
+                <h2>AWS Web Application Firewall (AWF) </h2>
+                <p>
+                  Es un servicio utilizado como firewall de aplicaciones web que permite monitorear las solicitudes de red que llegan a la aplicación web. Funciona utilizando web Access control list ACL para proteger los recursos de AWS.
+                </p>
+
+                <h2>Amazon Inspector</h2>
+                <p>
+                  Es un servicio que permite realizar pruebas de seguridad de manera automática. Revisa si la aplicación tiene vulnerabilidades de seguridad y desviaciones de las mejores prácticas.
+                </p>
+
+                <h2>Amazon Guarduty</h2>
+                <p>
+                  Es un servicio que provee detección inteligente contra las amenazas en la infraestructura y recursos. Identifica daños chequeando de manera continua la actividad y el comportamiento de las cuentas en un ambiente de AWS.
+                </p>
+                <img src="../assets/img/blog/aws-services/guarduty.png" class="img-fluid" alt="">
+                <p>
+                  Detecta direcciones IP maliciosas, detecciones anormales, y machine learning para identificar las amenazas de manera más precisa.
+                </p>
+                <h2>Amazon Cloudwatch</h2>
+                <p>
+                  Es un servicio web que permite monitorear varias métricas de los recursos y configurar alarmas basadas en dichas métricas.
+                </p>
+                <p>
+                  Por ejemplo, detener una instancia EC2 cuando el % de utilización de un recurso permanece debajo de cierto umbral por una cantidad de tiempo considerable, también se puede integrar con SNS
+                </p>
+                <img src="../assets/img/blog/aws-services/cloudwatch.png" class="img-fluid" alt="">
+                <h2>AWS Cloudtrail</h2>
+                <p>
+                  Es un servicio de auditoría que registra las llamadas a las API en la cuenta, la información guardada incluye el momento de la llamada de la API, la dirección IP de origen, y más. Permite ver una historia completa de la actividad de los usuarios en y llamadas de API. Todos los eventos son típicamente actualizados cada 15 minutos.
+                </p>
+                <img src="../assets/img/blog/aws-services/cloudtrail.png" class="img-fluid" alt="">
+                <h3>Cloudtrail Insights </h3>
+                <p>
+                  Se puede también habilitar insights, es una feature adicional que permite automáticamente detectar actividad inusual en las APIS.
+                </p>
+                <h2>AWS Trusted Advisor </h2>
+                <p>
+                  Es un servicio que inspecciona el ambiente de AWS y provee recomendaciones en tiempo real en concordancia de las mejores prácticas en AWS.
+                </p>
+                <p>
+                  Realiza descubrimientos en 5 categorias: cost optimización, performance, security, fault tolerance, and service limits.
+                </p>
+                <img src="../assets/img/blog/aws-services/trustedadvisor.png" class="img-fluid" alt="">
+                
+                <h2>AWS Pricing Calculator</h2>
+                <p>
+                  Es una herramienta que permite explorar recursos de AWS y estimar costos para los casos de uso.
+                </p>
+                <h2>AWS Billing & Cost Management Dashboard </h2>
+                <p>
+                  Es un servicio que permite pagar los gatos, monitorear el uso y analizar y controlar los gatos. Tiene distintas funcionalidades como
+                <ul>
+                  <li>Comparar mes a mes los gastos y obtener una predicción basado en los patrones de uso</li>
+                  <li>Ver el gasto mensual por cada servicio</li>
+                  <li>Ver el uso de la capa gratuita</li>
+                  <li>Acceder a cost explorer y crear budgets</li>
+                  <li>Comprar y administrar saving plans</li>
+                  <li>Publicar reports de uso y costo</li>
+
+                </ul>
+                </p>
+
+                <h2>Consolidated billing </h2>
+                <p>
+                  Es una herramienta que permite agrupar las cuentas de distintas cuentas de AWS que se encuentren bajo una misma organización. Se pueden agrupar hasta máximo 4 cuentas y si es necesario aumentar se debe hablar con soporte. Se puede revisar el gasto de cada cuenta y agrupar gastos para calificar a descuentos por uso.
+                </p>
+            
+
+                <h2>AWS Budgets</h2>
+                <p>
+                  Es un servicio que permite crear budgets para planificar el uso de un servicio, los costos y las reservaciones. Se actualiza 3 veces al día para determinar que tan cerca estamos de nuestro uso actual con los gastos y el uso de la capa gratuita.
+                </p>
+
+                <img src="../assets/img/blog/aws-services/budgets.png" class="img-fluid" alt="">
+
+                <h2>AWS Cost Explorer </h2>
+                <p>
+                  Es un servicio que permite visualizar, entender y administrar los costos y usos de los servicios en AWS a través del tiempo.
+                </p>
+                <img src="../assets/img/blog/aws-services/cost_explorer.png" class="img-fluid" alt="">
+                <p>
+                  Permite agrupar por tipo de instancia e incluso por tags por si queremos associar recursos a un mismo tag para evaluar sus costos.
+                </p>
+
+                <h2>AWS Support</h2>
+                <p>
+                  AWS ofrece 4 tipos de planes de soporte dependiendo de la necesidad del cliente.
+                </p>
+
+                <h3>Basic</h3>
+                <p>
+                  Es gratuito para todos los usuarios, incluye accedo a servicio al cliente, whitepapers, documentation y comunidades de soporte. Se puede acceder a preguntas de billing e incremento en los limites de servicios.
+                </p>
+                <p>
+                  Se tiene un acceso limitado a los chequeo de Trusted Advisor, adicional a la Personal health dashboard que provee alertas cuando AWS presenta algún inconveniente.
+                </p>
+
+                <h3>Developer</h3>
+                <p>
+                  Tiene acceso a:
+                  <ul>
+                    <li>Guia de mejores practicas</li>
+                    <li>Client-side diagnostic tool </li>
+                    <li>•	Soporte en la construcción de arquitecturas en la cual incluye como usar AWS offerings, features y servicios conjuntos</li>
+
+                  </ul>
+                  El tiempo de respuesta puede demorar hasta 24h y 12h en caso de que sea un system impaired
+                </p>
+
+                <h3>Business</h3>
+                <p>
+                  Permite acceder a:
+                  <ul>
+                    <li>•	Guia a nivel de caso para las ofertas, features y servicios que mejor se acomoden a la necesidad del cliente</li>
+                    <li>•	Todas las recomendaciones de Trusted Advisor</li>
+                    <li>•	Soporte limitado de software de terceros, como sistemas operativos comunes y application stack componentes.</li>
+                  </ul>
+                  Se tiene acceso a contacto con soporte por medio de llamadas y se tiene una respuesta dentro de las próximas 4H, si el system is impaired de 1H.
+                </p>
+
+                <h3>Enterprise</h3>
+                <p>
+                  Es el plan de soporte más costoso, pero con más beneficios como:
+                  <ul>
+                    <li>Guia en la arquitectura de aplicaciones, el cual es una relación de consultoría para apoyar a al compañía en casos de uso específicos y aplicaciones</li>
+                    <li>Infrastructure event management: Es un engagement de corto termino que ayuda a la compañía a tener un mejor entendimiento de los casos de usu</li>
+                    <li>Un technical Account Manager (TAM)</li>
+                    <li>SLA de 15 Minutos para resolución de conflictos </li>
+                  </ul>
+                  Tam es una persona encargada proveer experticia en una gran cantidad de servicios de AWS, ayuda a diseñar soluciones eficientes utilizando múltiples servicios para lograr un apprach integrado.
+                </p>
+
+                <h2>AWS Marketplace</h2>
+                <p>
+                  Es un catalogo digital que permite tener un listado de software ofrecido por terceros, es utilizado para testear y comprar software que funciona en AWS.
+                </p>
+                <img src="../assets/img/blog/aws-services/marketplace.png" class="img-fluid" alt="">
+
+                <h2>AWS Cloud Adoption Framework </h2>
+                <p>
+                  Es una guía enfocada en 6 focos llamados perspectivas, cada perspectiva lleva una serie de responsabilidades que permitirán una migración a la nube de manera organizada y beneficiosa.
+                <ul>
+                  <li>En la parte no IT: Business, People and Governance </li>
+                  <li>En la parte IT: Platform, Security y Operations.</li>
+                </ul>
+                </p>
+                <p>
+                  Business se encarga de que la parte IT esté alineada con las necesidades de negocio
+                </p>
+                <p>
+                  People se encarga de administrar la organización utilizando estrategias para la adopción. <br>
+                  Governance se encarga de alinear las habilidades y processos de IT com las estratégias de negocio. <br>
+                  Platform se encarga de utilizar los principios y patrones para la implementación de soluciones en la nube <br>
+                  Security se encarga de cumplir los objetivos de seguridad, visibilidad, control etc. <br>
+                  Operations se encarga de permitir,correr,usar,operar y recuperar cargas de trabajo IT al nivel de SLA acordado con los stakeholders.
+                </p>
+
+                <h2>Estrategias de Migración </h2>
+                <p>
+                  <ul>
+                    <li><b>Rehosting:</b>es un lift and shift, significa mover la aplicación y hacerla funcionar de manera igual</li>
+                    <li><b>Replatforming: </b>Permite realizar optimizaciones basadas en la nube sin tener que cambiar el funcionamiento core de la aplicación.</li>
+                    <li><b>Refactoring/Re-architeching </b>Es utilizada para cambiar toda la aplicación y ser cloud-native aprovechando todas las capacidades de los servicios de la nube</li>
+                    <li><b>Repurchasing:</b>es hacer el cambio de licencias tradicionales hacia software as a service utilizando aws Marketplace</li>
+                    <li><b>Retaining </b>es utilizando cuando no se puede migrar toda la infraestructura de una aplicación lo cual ciertos legacy services son mantenidos on-premise</li>
+                    <li><b>Retiring </b>es utilizando se retiran servicios de la aplicación que ya no son utilizados o son reemplazados por otros servicios ya existentes</li>
+                  </ul>
+                </p>
+
+                <h2>SnowFamily Members</h2>
+                <p>
+                  Es una colección de dispositivos físicos utilizados para migrar información on-premise hacia la nube cuando existen limitantes a nivel de bandwidth y no se desea utilizar la red pública.
+                </p>
+                <img src="../assets/img/blog/aws-services/swnofamily.png" class="img-fluid" alt="">
+                <p>
+                  <ul>
+                    <li>Snowcone: 8Tb de información</li>
+                    <li>Snowball: 80Tb o 42Tb de información </li>
+                    <li>Snowmobile: 100Pb de información</li>
+                  </ul>
+                </p>
+
+                <h3>Amazon Transcribe </h3>
+                <p>
+                  Convierte voz a texto
+                </p>
+                <h3>Amazon Comprehend </h3>
+                <p>	
+                  Encuentra patrones en texto
+                </p>
+                <h3>Amazon Fraud Detector</h3>
+                <p>
+                  Permite identificar posibles actividades fraudulentas online
+                </p>
+                <h3>Amazon Lex</h3>
+                <p>
+                  Corazón de Alexa y permite construir chatbots de texto y voz
+                </p>
+                <h3>Amazon SageMaker</h3>
+                <p>
+                  Permite build, entrenar y desplegar modelos de machine learning de manera fácil y rápida.
+                </p>
+                <h3>Amazon Augmented AI </h3>
+                <p>
+                  Permite revisar workflows de machine learning use cases.
+                </p>
+                <h3>Amazon TextExtract</h3>
+                <p>
+                  Permite extraer texto e información a partir de documentos 
+                </p>
+                <h3>AWS Deepracer</h3>
+                <p>
+                  Permite a los developers experimentar con reinforcement learning.
+                </p>
+                <h3>AWS Ground Station</h3>
+                <p>
+                  Permite utilizar satélites on demand
+                </p>
+
+                <h2>AWS- Well architected Framework</h2>
+                <p>
+                  Este framework ayuda a entender y diseñar,operar sistemas confiables,seguros,eficientes y económicos en la nube de AWS. 
+                </p>
+                <img src="../assets/img/blog/aws-services/framework.png" class="img-fluid" alt="">
+
+                <p>
+                  Se centra en 5 pilares:
+                  <ul>
+                    <li>Operational Excellence</li>
+                    <li>Security</li>
+                    <li>Reliability</li>
+                    <li>Performance Efficiency </li>
+                    <li>Cost Optimization</li>
+                  </ul>
+                  Existe la herramienta dentro la consola de AWS y puede ser una guía para uno mismo diseñar sus arquitecturas.
+                </p>
+
+                <h2>Ventajas de la computación en la nube</h2>
+                <p>
+                  Existen 6 ventajas importantes al realizar la adopción de cloud
+                  <ul>
+                    <li>Trade upfront expenses for variable expense</li>
+                    <li>Benefit from massive economies of scale</li>
+                    <li>Stop guessing capacity</li>
+                    <li>Increase speed and agility</li>
+                    <li>Stop spending money running and maintaining data centers</li>
+                    <li>Go global in minutes</li>
+                  </ul>
+                </p>
+
+                <h2>Usual Architecture</h2>
+                <img src="../assets/img/blog/aws-services/ha.png" class="img-fluid" alt="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+
+
 
                 
 
